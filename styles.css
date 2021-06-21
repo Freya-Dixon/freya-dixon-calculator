@@ -4,6 +4,8 @@
   margin: 0 auto;
   border: 2px solid black;
   display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
   justify-content: center;
   background-color: black;
 }
@@ -27,5 +29,16 @@
 }
 .wrapper .top__functions button {
   background-color: #A5A5A5;
+  color: black;
+}
+.wrapper .number__btns {
+  width: 10vh;
+  height: 25vh;
+  margin: 0 auto;
+  display: grid;
+  color: black;
+}
+.wrapper .number__btns button {
+  background-color: #6b6b6b;
   color: white;
 }

@@ -4,6 +4,8 @@
     margin: 0 auto;
     border: 2px solid black;
     display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
     justify-content: center;
     background-color: black;
     .side__functions {
@@ -25,7 +27,18 @@
         color: black;
         button {
             background-color: #A5A5A5;
-            color: white;
+            color: black;
         }
+    }
+    .number__btns {
+        width: 10vh;
+        height: 25vh;
+        margin: 0 auto;
+        display: grid;
+        color: black;
+         button {
+             background-color: #6b6b6b;
+             color: white;
+         }
     }
 }
