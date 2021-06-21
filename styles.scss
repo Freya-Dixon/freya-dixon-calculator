@@ -17,4 +17,15 @@
                 color: white;
           }
     }
+    .top__functions {
+        width: 10vh;
+        height: 25vh;
+        margin: 0 auto;
+        display: grid;
+        color: black;
+        button {
+            background-color: #A5A5A5;
+            color: white;
+        }
+    }
 }

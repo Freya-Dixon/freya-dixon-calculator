@@ -18,3 +18,14 @@
   background-color: #F79A0B;
   color: white;
 }
+.wrapper .top__functions {
+  width: 10vh;
+  height: 25vh;
+  margin: 0 auto;
+  display: grid;
+  color: black;
+}
+.wrapper .top__functions button {
+  background-color: #A5A5A5;
+  color: white;
+}
