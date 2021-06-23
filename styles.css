@@ -23,6 +23,8 @@
   color: white;
 }
 .calculator .buttons .btn__grey {
+  width: 10vh;
+  height: 10vh;
   background-color: #A5A5A6;
   color: white;
   border: 1px solid #A5A5A6;
@@ -32,6 +34,8 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 .calculator .buttons .btn__orange {
+  width: 10vh;
+  height: 10vh;
   background-color: #EE9807;
   color: white;
   border: 1px solid #EE9807;
@@ -41,6 +45,8 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 .calculator .buttons .btn__number {
+  width: 10vh;
+  height: 10vh;
   background-color: #333333;
   color: white;
   border: 1px solid #333333;
