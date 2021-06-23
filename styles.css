@@ -12,13 +12,16 @@
 .wrapper .side__functions {
   width: 10vh;
   height: 25vh;
-  margin: 0 auto;
-  display: grid;
+  margin: 0px;
+  grid-column: 1/span 3;
+  grid-row: 1;
+  justify-content: space-around;
   color: white;
 }
 .wrapper .side__functions button {
   background-color: #F79A0B;
   color: white;
+  border-radius: 100%;
 }
 .wrapper .top__functions {
   width: 10vh;
@@ -30,15 +33,20 @@
 .wrapper .top__functions button {
   background-color: #A5A5A5;
   color: black;
+  border-radius: 100%;
 }
 .wrapper .number__btns {
   width: 10vh;
   height: 25vh;
-  margin: 0 auto;
+  margin: 0px;
   display: grid;
+  grid-column: 2/4;
+  grid-row: 3/4;
   color: black;
+  justify-content: space-evenly;
 }
 .wrapper .number__btns button {
   background-color: #6b6b6b;
   color: white;
+  border-radius: 100%;
 }
