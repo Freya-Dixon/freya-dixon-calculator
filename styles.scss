@@ -21,55 +21,55 @@
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: repeat(5, 1fr);
-        grid-gap: 5px;
+        grid-gap: 2px;
         align-items: center;
         color: white;      
 
         .btn__grey {
-           width: 10vh;
-           height: 10vh;
+            width: 15vh;
+            height: 15vh;
            background-color: #A5A5A6;
            color: white;
            border: 1px solid #A5A5A6;
            border-radius: 50%;
            font-size: 30px;
            text-align: center;
-           padding: 20px;
-           font-family: Arial, Helvetica, sans-serif;
+           padding: 10px;
+           font-family: Helvetica, sans-serif;
         }
 
 
         .btn__orange {
-            width: 10vh;
-            height: 10vh;
+            width: 15vh;
+            height: 15vh;
             background-color: #EE9807;
             color: white;
             border: 1px solid #EE9807;
             border-radius: 50%;
-            font-size: 20px;
-            padding: 20px;
-            font-family: Arial, Helvetica, sans-serif;
+            font-size: 30px;
+            padding: 10px;
+            font-family: Helvetica, sans-serif;
          }
          .btn__number {
-            width: 10vh;
-            height: 10vh;
+            width: 15vh;
+            height: 15vh;
             background-color: #333333; 
             color: white;
             border: 1px solid #333333;
             border-radius: 50%;
-            font-size: 20px;
-            padding: 20px;
-            font-family: Arial, Helvetica, sans-serif;
+            font-size: 30px;
+            padding: 10px;
+            font-family: Helvetica, sans-serif;
            
          }
          .btn__number.zero {
             grid-column: 1 / span 2;
-            width: 14vw;
+            width: 18vw;
             height: 10vh;
             border-radius: 40px;
             border: none;
-            font-size: 20px;
-            padding: 20px;
+            font-size: 30px;
+            padding: 10px;
         }
     }
     
