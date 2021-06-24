@@ -12,6 +12,8 @@
   background-color: black;
 }
 .calculator .input__container {
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
   width: 30vw;
   height: 20vh;
 }
