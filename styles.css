@@ -28,7 +28,7 @@
   align-items: center;
   color: white;
 }
-.calculator .buttons .btn__grey {
+.calculator .buttons .btn.function {
   width: 15vh;
   height: 15vh;
   background-color: #A5A5A6;
@@ -40,11 +40,11 @@
   padding: 10px;
   font-family: Helvetica, sans-serif;
 }
-.calculator .buttons .btn__grey:hover {
+.calculator .buttons .btn.function:hover {
   opacity: 0.6;
   transition: 0.4s;
 }
-.calculator .buttons .btn__orange {
+.calculator .buttons .btn.operator {
   width: 15vh;
   height: 15vh;
   background-color: #EE9807;
@@ -55,11 +55,11 @@
   padding: 10px;
   font-family: Helvetica, sans-serif;
 }
-.calculator .buttons .btn__orange:hover {
+.calculator .buttons .btn.operator:hover {
   opacity: 0.6;
   transition: 0.4s;
 }
-.calculator .buttons .btn__number {
+.calculator .buttons .btn.number {
   width: 15vh;
   height: 15vh;
   background-color: #333333;
@@ -70,7 +70,7 @@
   padding: 10px;
   font-family: Helvetica, sans-serif;
 }
-.calculator .buttons .btn__number:hover {
+.calculator .buttons .btn.number:hover {
   opacity: 0.6;
   transition: 0.4s;
 }

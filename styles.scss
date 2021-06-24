@@ -29,7 +29,7 @@
         align-items: center;
         color: white;      
 
-        .btn__grey {
+        .btn.function {
             width: 15vh;
             height: 15vh;
            background-color: #A5A5A6;
@@ -47,7 +47,7 @@
         }
 
 
-        .btn__orange {
+        .btn.operator{
             width: 15vh;
             height: 15vh;
             background-color: #EE9807;
@@ -62,7 +62,7 @@
                 transition: 0.4s;
                 }
          }
-         .btn__number {
+         .btn.number {
             width: 15vh;
             height: 15vh;
             background-color: #333333; 

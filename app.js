@@ -1,20 +1,39 @@
 //access html elements onto js 
 
-const result = document.getElementsByClassName('result');
-console.log(result);
-const numberButtons = document.getElementsByClassName('btn__number');
+const numberResult = document.querySelector('h1');
+const numberButtons = document.querySelectorAll('.btn.number');
 console.log(numberButtons);
+const allButtons = document.querySelectorAll('.btn');
 
-// set variables 
+const clearButton = document.querySelector('.btn.function.clear')
 
-numberButtons.addEventListener('click', function (e) {
-    e.preventDefault();
-    let newNumber = numberButton.value;
-    result.innerHTML = newNumber;
-    console.log(newNumber);
-});
+const functionsButtons = document.querySelectorAll('.btn.function')
+
+const operatorButtons = document.querySelectorAll('.btn.operator')
+
+allButtons.forEach((button) => {
+    button.addEventListener('click', (e)=> {
+        buttonEventListener(e)
+    })
+})
 
 //functions 
+
+//returns value to h1
+    const buttonEventListener = (e) => {
+    const buttonPressed = e.target.innerHTML;
+    numberResult.innerHTML = buttonPressed;
+    numberButtons.addEventListener('buttonEventListener');
+    
+}
+
+
+// clears output 
+const clearValue = (e) => {
+    clearButton.innerHTML == 0
+    clearButton.addEventListener('click', (e))
+}
+
 
 
 //return values 
