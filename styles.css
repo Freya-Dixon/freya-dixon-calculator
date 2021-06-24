@@ -38,6 +38,10 @@
   padding: 10px;
   font-family: Helvetica, sans-serif;
 }
+.calculator .buttons .btn__grey:hover {
+  opacity: 0.6;
+  transition: 0.4s;
+}
 .calculator .buttons .btn__orange {
   width: 15vh;
   height: 15vh;
@@ -48,6 +52,10 @@
   font-size: 30px;
   padding: 10px;
   font-family: Helvetica, sans-serif;
+}
+.calculator .buttons .btn__orange:hover {
+  opacity: 0.6;
+  transition: 0.4s;
 }
 .calculator .buttons .btn__number {
   width: 15vh;
@@ -60,6 +68,10 @@
   padding: 10px;
   font-family: Helvetica, sans-serif;
 }
+.calculator .buttons .btn__number:hover {
+  opacity: 0.6;
+  transition: 0.4s;
+}
 .calculator .buttons .btn__number.zero {
   grid-column: 1/span 2;
   width: 18vw;
@@ -68,4 +80,8 @@
   border: none;
   font-size: 30px;
   padding: 10px;
+}
+.calculator .buttons .btn__number.zero:hover {
+  opacity: 0.6;
+  transition: 0.4s;
 }
