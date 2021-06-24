@@ -5,7 +5,8 @@ const numberButtons = document.querySelectorAll('.btn.number');
 console.log(numberButtons);
 const allButtons = document.querySelectorAll('.btn');
 
-const clearButton = document.querySelector('.btn.function.clear')
+const clearButton = document.querySelector('.btn.function.clear');
+console.log(clearButton);
 
 const functionsButtons = document.querySelectorAll('.btn.function')
 
@@ -17,26 +18,18 @@ allButtons.forEach((button) => {
     })
 })
 
-//functions 
-
-//returns value to h1
     const buttonEventListener = (e) => {
+ 
     const buttonPressed = e.target.innerHTML;
     numberResult.innerHTML = buttonPressed;
     numberButtons.addEventListener('buttonEventListener');
     
 }
 
+//clears ouput 
 
-// clears output 
-const clearValue = (e) => {
-    clearButton.innerHTML == 0
-    clearButton.addEventListener('click', (e))
-}
-
+clearButton.addEventListener('click',() => {
+    numberResult.innerHTML = 0;
+});
 
 
-//return values 
-
-
-//
