@@ -2,6 +2,7 @@
 
 const numberResult = document.querySelector('h1');
 console.log(numberResult);
+
 const numberButtons = document.querySelectorAll('.btn.number');
 console.log(numberButtons);
 
@@ -27,6 +28,9 @@ console.log(equalButton);
 const myStorage = window.sessionStorage;
 console.log(myStorage);
 
+let stringOutput = "";
+console.log(stringOutput);
+
 allButtons.forEach((button) => {
     button.addEventListener('click', (e)=> {
         buttonEventListener(e)
@@ -41,26 +45,43 @@ let value = 0;
     } else {
         value = value + e.target.innerHTML
         numberResult.innerHTML = value;
-
     }
 }
 
-// clears output- should be able to clear value without keeping session storage data and display 0 on H1
+// clears output- should be able to clear value without keeping session storage data and display 0 on H1 
+
+// 
+// clearButton.addEventListener('click',() => {
+//     numberResult.innerHTML = 0;
+//     if (value > 0) {
+//         window.sessionStorage.removeItem()
+//     }
+// });
+
 
 // clearButton.addEventListener('click',() => {
 //     numberResult.innerHTML = 0;
-    //    sessionStorage.removeItem('');
-// });
-// 
+// })
 
+const clearNumber = clearButton.addEventListener('click',() => {
+    stringOutput = "";
+    resetOutput();
+});
 
+const resetOutput = () => {
+    if (stringOutput = "") {
+        numberResult.innerHTML = "";
+    } else {
+        numberResult.innerHTML = stringOutput;
+    }
+}
 // operator interaction 
 
 // plus function 
 
-const sum = (value) => {
-    value + value
-}
+// const sum = (value) => {
+//     value + value
+// }
 
 // const multiply = () => {
     
