@@ -8,6 +8,9 @@ const allButtons = document.querySelectorAll('.btn');
 const clearButton = document.querySelector('.btn.function.clear');
 console.log(clearButton);
 
+const plusButton = document.querySelector('.btn.function.minus');
+console.log(plusButton);
+
 const functionsButtons = document.querySelectorAll('.btn.function')
 
 const operatorButtons = document.querySelectorAll('.btn.operator')
@@ -17,19 +20,49 @@ allButtons.forEach((button) => {
         buttonEventListener(e)
     })
 })
-
+let value = 0;
     const buttonEventListener = (e) => {
- 
-    const buttonPressed = e.target.innerHTML;
-    numberResult.innerHTML = buttonPressed;
-    numberButtons.addEventListener('buttonEventListener');
-    
+    if (value === 0) {
+        value = e.target.innerHTML
+        numberResult.innerHTML = value;
+       return value;
+    } else {
+        value = value + e.target.innerHTML
+        numberResult.innerHTML = value;
+    }
+    clearButton.addEventListener('click',() => {
+        numberResult.innerHTML = 0;
+    });
 }
 
 //clears ouput 
 
-clearButton.addEventListener('click',() => {
-    numberResult.innerHTML = 0;
-});
+// clearButton.addEventListener('click',() => {
+//     numberResult.innerHTML = 0;
+// });
 
+
+// operator interaction 
+
+// plus function 
+
+const sum = () => {
+    
+}
+
+const multiply = () => {
+    
+}
+
+const minus = () => {
+
+}
+
+const divide = () => {
+
+}
+
+const findPercentage = () => {
+    
+}
 
