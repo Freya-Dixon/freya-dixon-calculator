@@ -1,6 +1,6 @@
 .calculator {
   width: 45vw;
-  height: 110vh;
+  height: 105vh;
   margin: 0px;
   border: 2px solid black;
   justify-content: center;
@@ -9,21 +9,27 @@
 .calculator .input__container {
   font-family: Arial, Helvetica, sans-serif;
   color: white;
-  width: 20vw;
-  height: 20vh;
+  width: 10vw;
+  height: 5vh;
 }
 .calculator .input__container #result {
-  font-size: 30px;
+  width: 100px;
+  height: 50px;
+  font-size: 50px;
+  font-family: Helvetica, sans-serif;
   display: flex;
-  margin-top: 20px;
-  padding: 20px;
+  flex-direction: row;
+  align-self: flex-end;
+  margin: 30px 30px 30px 30px;
+  padding: 10px;
   background-color: black;
   color: white;
+  border: none;
 }
 .calculator .buttons {
   width: 40vw;
   height: 80vh;
-  margin: 0px 0px 0px 0px;
+  margin: 40px 30px 30px 30px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(5, 1fr);
