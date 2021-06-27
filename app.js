@@ -29,22 +29,35 @@ console.log(plusButton);
 const equalButton = document.querySelector('.btn.operator.equals')
 console.log(equalButton);
 
-allButtons.forEach((button) => {
-    button.addEventListener('click', (e)=> {
-        buttonEventListener(e)
-    })
-})
-let value = 0;
-    const buttonEventListener = (e) => {
-    if (value === 0) {
-        value = e.target.innerHTML
-        numberResult.innerHTML = value;
-       return value;
-    } else {
-        value = value + e.target.innerHTML
-        numberResult.innerHTML = value;
-    }
+// functions 
+
+// display value on page 
+
+
+function displayInput() {
+    let display = document.querySelector("#result")
+    display.value = calculator.displayInput
 }
+displayInput();
+
+
+
+// allButtons.forEach((button) => {
+//     button.addEventListener('click', (e)=> {
+//         buttonEventListener(e)
+//     })
+// })
+// let value = 0;
+//     const buttonEventListener = (e) => {
+//     if (value === 0) {
+//         value = e.target.innerHTML
+//         numberResult.innerHTML = value;
+//        return value;
+//     } else {
+//         value = value + e.target.innerHTML
+//         numberResult.innerHTML = value;
+//     }
+// }
 
 // clears output- should be able to clear value without keeping session storage data and display 0 on H1 
 
