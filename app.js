@@ -8,8 +8,7 @@ const calculatorObject = {
     operator = null
 };
 
-const numberButtons = document.querySelectorAll('.btn.number');
-console.log(numberButtons);
+
 
 const allButtons = document.querySelectorAll('.btn');
 console.log(allButtons);
@@ -40,7 +39,9 @@ function displayInput() {
 }
 displayInput();
 
+// recognise keys and display on input 
 
+const buttons = document.querySelector('.btn.number')
 
 // allButtons.forEach((button) => {
 //     button.addEventListener('click', (e)=> {
@@ -59,33 +60,23 @@ displayInput();
 //     }
 // }
 
-// clears output- should be able to clear value without keeping session storage data and display 0 on H1 
-
-// 
-// clearButton.addEventListener('click',() => {
-//     numberResult.innerHTML = 0;
-//     if (value > 0) {
-//         window.sessionStorage.removeItem()
-//     }
-// });
-
 
 // clearButton.addEventListener('click',() => {
 //     numberResult.innerHTML = 0;
 // })
 
-const clearNumber = clearButton.addEventListener('click',() => {
-    stringOutput = "";
-    resetOutput();
-});
+// const clearNumber = clearButton.addEventListener('click',() => {
+//     stringOutput = "";
+//     resetOutput();
+// });
 
-const resetOutput = () => {
-    if (stringOutput == "") {
-        numberResult.innerHTML = "";
-    } else {
-        numberResult.innerHTML = stringOutput;
-    }
-};
+// const resetOutput = () => {
+//     if (stringOutput == "") {
+//         numberResult.innerHTML = "";
+//     } else {
+//         numberResult.innerHTML = stringOutput;
+//     }
+// };
 
 
 
