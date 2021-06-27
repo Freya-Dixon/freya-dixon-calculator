@@ -7,20 +7,22 @@
     border: 2px solid black;
     justify-content: center;
     background-color: black;
-}
+
     .input__container {
         font-family: Arial, Helvetica, sans-serif;
          color: white;
-         width: 30vw;
+         width: 20vw;
          height: 20vh;
-         h1.result {
-            font-size: 50px;
+         #result {
+            font-size: 30px;
             display: flex;
             margin-top: 20px;
-            padding: 0px;
-        }    
+            padding: 20px;
+            background-color: black;
+            color: white;
+        }     
     }
-   
+    
     .buttons {
         width: 40vw;
         height: 80vh;
@@ -39,7 +41,7 @@
            color: white;
            border: 1px solid #A5A5A6;
            border-radius: 50%;
-           font-size: 30px;
+           font-size: 40px;
            text-align: center;
            padding: 10px;
            font-family: Helvetica, sans-serif;
@@ -50,18 +52,20 @@
         }
 
         .btn.operator{
-            width: 15vh;
+            width: 15vw;
             height: 15vh;
             background-color: #EE9807;
             color: white;
             border: 1px solid #EE9807;
             border-radius: 50%;
-            font-size: 30px;
+            font-size: 40px;
             padding: 10px;
             font-family: Helvetica, sans-serif;
             &:hover {
                 opacity: 0.6; 
                 transition: 0.4s;
+                background-color: white;
+                color: #EE9807;
                 }
          }
          .btn.number {
@@ -71,7 +75,7 @@
             color: white;
             border: 1px solid #333333;
             border-radius: 50%;
-            font-size: 30px;
+            font-size: 40px;
             padding: 10px;
             font-family: Helvetica, sans-serif;
             &:hover {
@@ -85,7 +89,7 @@
             height: 15vh;
             border-radius: 50px;
             border: none;
-            font-size: 30px;
+            font-size: 40px;
             padding: 10px;
             &:hover {
                 opacity: 0.6; 
@@ -93,4 +97,4 @@
                 }
         }
 
-
+    }

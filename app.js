@@ -11,7 +11,7 @@ const calculatorObject = {
 return calculatorObject;
 
 // add event listener to each button
-const buttons = document.querySelectorAll('.button'); 
+const buttons = document.getElementsByClassName('.btn')
 console.log(buttons);
 
 buttons.forEach((button) => {
@@ -19,6 +19,7 @@ buttons.forEach((button) => {
     updateInput();
     enterNumber();
     accessOperator();
+    calculate();
 });
 
 // update display to the user's input 
@@ -32,7 +33,7 @@ updateInput();
 
 // display buttons on input display when user hits key
 
-enterNumber = (e) => {
+enterNumber = () => {
     const currentValue = calculatorObject;
     if (calculator.currentValue = 0) {
      display.innerHTML = currentValue;
@@ -46,13 +47,29 @@ enterNumber = (e) => {
 // create operator function
 
 accessOperator = (e) => {
-    const curentValue, number1, operator = calculator;
+    const {curentValue, number1, operator} = calculator;
     const inputValue = parsefloat(curentValue);
     if (number1 = null) {
         calculator.number1 = inputValue;
     }
 calculator.ifnumber2 = true;
 calculator.operator = secondOperator;
+}
+// calculate function
+calculate = () => {
+    if (operator === '+') {
+        return number1 + number2;
+    }
+    else if (operator === '-') {
+        return number1 - number2;
+    }
+    else if (operator === 'x') {
+        return number1 * number2;
+    }
+    else if (operator === '÷') {
+        return number1 / number2;
+    }
+    return number2;
 }
 
 
