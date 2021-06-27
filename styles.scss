@@ -1,9 +1,5 @@
 @import "_variables";
 
-* {
-    margin: 0 auto;
-    box-sizing: border-box;
-}
 .calculator {
     width: 40vw;
     height: 100vh;
@@ -11,13 +7,20 @@
     border: 2px solid black;
     justify-content: center;
     background-color: black;
-     .input__container {
-         font-family: Arial, Helvetica, sans-serif;
+}
+    .input__container {
+        font-family: Arial, Helvetica, sans-serif;
          color: white;
          width: 30vw;
          height: 20vh;
-     }
-     
+         h1.result {
+            font-size: 50px;
+            display: flex;
+            margin-top: 20px;
+            padding: 0px;
+        }    
+    }
+   
     .buttons {
         width: 40vw;
         height: 80vh;
@@ -28,10 +31,10 @@
         grid-gap: 2px;
         align-items: center;
         color: white;      
-
+    }
         .btn.function {
-            width: 15vh;
-            height: 15vh;
+           width: 15vh;
+           height: 15vh;
            background-color: #A5A5A6;
            color: white;
            border: 1px solid #A5A5A6;
@@ -45,7 +48,6 @@
             transition: 0.4s;
             }
         }
-
 
         .btn.operator{
             width: 15vh;
@@ -75,12 +77,11 @@
             &:hover {
                 opacity: 0.6; 
                 transition: 0.4s;
-                }
-           
+                } 
          }
-         .btn__number.zero {
+         .btn.number.zero {
             grid-column: 1 / span 2;
-            width: 18vw;
+            width: 20vw;
             height: 15vh;
             border-radius: 50px;
             border: none;
@@ -91,6 +92,5 @@
                 transition: 0.4s;
                 }
         }
-    }
-    
-}
+
+
