@@ -9,10 +9,6 @@ const calculatorObject = {
 };
 
 
-
-const allButtons = document.querySelectorAll('.btn');
-console.log(allButtons);
-
 const clearButton = document.querySelector('.btn.function.clear');
 console.log(clearButton);
 
@@ -41,24 +37,24 @@ displayInput();
 
 // recognise keys and display on input 
 
-const buttons = document.querySelector('.btn.number')
+const allbuttons = document.querySelector('.btns')
+    const buttonEventListener = (e) => {
+    if (value === 0) {
+       value = e.target.innerHTML
+        display.innerHTML = value;
+       return value;
+    } else {
+        value = value + e.target.innerHTML
+        display.innerHTML = value;
+    }
+}
 
-// allButtons.forEach((button) => {
-//     button.addEventListener('click', (e)=> {
-//         buttonEventListener(e)
-//     })
-// })
-// let value = 0;
-//     const buttonEventListener = (e) => {
-//     if (value === 0) {
-//         value = e.target.innerHTML
-//         numberResult.innerHTML = value;
-//        return value;
-//     } else {
-//         value = value + e.target.innerHTML
-//         numberResult.innerHTML = value;
-//     }
-// }
+allButtons.forEach((button) => {
+    button.addEventListener('click', (e)=> {
+        buttonEventListener(e)
+    })
+})
+
 
 
 // clearButton.addEventListener('click',() => {
