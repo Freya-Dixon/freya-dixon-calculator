@@ -16,7 +16,10 @@ console.log(buttons);
 
 buttons.forEach((button) => {
     button.addEventListener('click', (e));
-})
+    updateInput();
+    enterNumber();
+    accessOperator();
+});
 
 // update display to the user's input 
 
@@ -27,12 +30,31 @@ display.value = calculator.currentValue;
 updateInput();
 
 
-// display digits on input display when user hits key
+// display buttons on input display when user hits key
 
-enterNumber = (number) => {
-    const displayInput = calculatorObject;
-    if 
+enterNumber = (e) => {
+    const currentValue = calculatorObject;
+    if (calculator.currentValue = 0) {
+     display.innerHTML = currentValue;
+    }
+    else {
+    currentValue = value + e.target.innerHTML;
+    display.innerHTML = value;
+    }
+};
+
+// create operator function
+
+accessOperator = (e) => {
+    const curentValue, number1, operator = calculator;
+    const inputValue = parsefloat(curentValue);
+    if (number1 = null) {
+        calculator.number1 = inputValue;
+    }
+calculator.ifnumber2 = true;
+calculator.operator = secondOperator;
 }
+
 
 // const clearButton = document.querySelector('.btn.function.clear');
 // console.log(clearButton);
