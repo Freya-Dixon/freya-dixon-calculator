@@ -1,7 +1,12 @@
 //access html elements onto js 
 
-const numberResult = document.querySelector('h1');
-console.log(numberResult);
+// calculator object, condenses important values into one object, curentValue will always be set to 0 by default, number 1 will be null. If number2 will be set to false, declared as boolean to adapt to multiple instances where user may or may not return value. The operator will also be set to null
+const calculatorObject = {
+    currentValue = '0',
+    number1 = null,
+    ifnumber2 = false,
+    operator = null
+};
 
 const numberButtons = document.querySelectorAll('.btn.number');
 console.log(numberButtons);
@@ -11,7 +16,6 @@ console.log(allButtons);
 
 const clearButton = document.querySelector('.btn.function.clear');
 console.log(clearButton);
-
 
 const functionsButtons = document.querySelectorAll('.btn.function')
 console.log(functionsButtons);
@@ -24,19 +28,6 @@ console.log(plusButton);
 
 const equalButton = document.querySelector('.btn.operator.equals')
 console.log(equalButton);
-
-const myStorage = window.sessionStorage;
-console.log(myStorage);
-
-let stringOutput = "";
-console.log(stringOutput);
-
-const calculatorObject = {
-    currentValue = '0',
-    number1 = null,
-    number2 = false,
-    operator = null
-};
 
 allButtons.forEach((button) => {
     button.addEventListener('click', (e)=> {
