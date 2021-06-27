@@ -31,6 +31,13 @@ console.log(myStorage);
 let stringOutput = "";
 console.log(stringOutput);
 
+const calculatorObject = {
+    outputValue = "0",
+    number1 = null,
+    number2 = false,
+    operator = null
+};
+
 allButtons.forEach((button) => {
     button.addEventListener('click', (e)=> {
         buttonEventListener(e)
@@ -69,19 +76,27 @@ const clearNumber = clearButton.addEventListener('click',() => {
 });
 
 const resetOutput = () => {
-    if (stringOutput = "") {
+    if (stringOutput == "") {
         numberResult.innerHTML = "";
     } else {
         numberResult.innerHTML = stringOutput;
     }
-}
+};
+
+
 // operator interaction 
 
 // plus function 
 
-// const sum = (value) => {
-//     value + value
+// const sum = plusButton.addEventListener('click',(number1,number2) => {
+// if (value === n1 + n2) {
+//     value = e.target.innerHTML
+//     numberResult.innerHTML = n1 + n2
 // }
+// })
+
+
+
 
 // const multiply = () => {
     
