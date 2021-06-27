@@ -1,6 +1,6 @@
 .calculator {
-  width: 40vw;
-  height: 100vh;
+  width: 45vw;
+  height: 110vh;
   margin: 0px;
   border: 2px solid black;
   justify-content: center;
@@ -27,13 +27,13 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(5, 1fr);
-  grid-gap: 2px;
+  grid-gap: 8px;
   align-items: center;
   color: white;
 }
 .calculator .btn.function {
-  width: 15vh;
-  height: 15vh;
+  width: 80px;
+  height: 80px;
   background-color: #A5A5A6;
   color: white;
   border: 1px solid #A5A5A6;
@@ -48,25 +48,25 @@
   transition: 0.4s;
 }
 .calculator .btn.operator {
-  width: 15vw;
-  height: 15vh;
+  width: 80px;
+  height: 80px;
   background-color: #EE9807;
   color: white;
   border: 1px solid #EE9807;
   border-radius: 50%;
   font-size: 40px;
-  padding: 10px;
+  padding: 5px;
   font-family: Helvetica, sans-serif;
 }
 .calculator .btn.operator:hover {
-  opacity: 0.6;
-  transition: 0.4s;
+  transition: 0.6s;
   background-color: white;
+  border: 1px solid white;
   color: #EE9807;
 }
 .calculator .btn.number {
-  width: 15vh;
-  height: 15vh;
+  width: 80px;
+  height: 80px;
   background-color: #333333;
   color: white;
   border: 1px solid #333333;
@@ -81,8 +81,8 @@
 }
 .calculator .btn.number.zero {
   grid-column: 1/span 2;
-  width: 20vw;
-  height: 15vh;
+  width: 160px;
+  height: 80px;
   border-radius: 50px;
   border: none;
   font-size: 40px;
