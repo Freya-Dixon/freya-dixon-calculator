@@ -1,50 +1,85 @@
 "use strict";
 
-//access html elements onto js 
-var numberResult = document.querySelector('h1');
-var numberButtons = document.querySelectorAll('.btn.number');
-console.log(numberButtons);
-var allButtons = document.querySelectorAll('.btn');
-var clearButton = document.querySelector('.btn.function.clear');
-console.log(clearButton);
-var plusButton = document.querySelector('.btn.function.minus');
-console.log(plusButton);
-var functionsButtons = document.querySelectorAll('.btn.function');
-var operatorButtons = document.querySelectorAll('.btn.operator');
-allButtons.forEach(function (button) {
-  button.addEventListener('click', function (e) {
-    buttonEventListener(e);
-  });
-});
-var value = 0;
+function _readOnlyError(name) { throw new Error("\"" + name + "\" is read-only"); }
 
-var buttonEventListener = function buttonEventListener(e) {
-  if (value === 0) {
-    value = e.target.innerHTML;
-    buttonPressed.value = value;
-    return value;
+// Freya Dixon Calculator Project Java Script
+// calculator object, condenses important values into one object, curentValue will always be set to 0 by default, number 1 will be null. If number2 will be set to false, declared as boolean to adapt to multiple instances where user may or may not return value. The operator will also be set to null
+var calculatorObject = {
+  currentValue: 0,
+  number1: null,
+  ifnumber2: false,
+  operator: null
+};
+console.log(calculatorObject);
+var keys = document.querySelectorAll('.btn');
+console.log(keys);
+var operatorKeys = document.querySelectorAll('.btn.operator');
+console.log(operatorKeys);
+var numberKeys = document.querySelectorAll('.btn.number');
+console.log(numberKeys);
+var functionKeys = document.querySelectorAll('.btn.function');
+keys.forEach(function (button) {
+  button.addEventListener('click', function (e) {
+    updateInput(e);
+    enterNumber(e);
+    accessOperator(e);
+    calculate(e);
+    resetButton(e);
+  });
+}); // update display to the user's input 
+
+updateInput = function updateInput() {
+  var display = document.querySelector('#result');
+  display.value = calculator.currentValue;
+};
+
+updateInput(); // display buttons on input display when user hits key
+
+enterNumber = function enterNumber() {
+  var currentValue = calculatorObject;
+
+  if (calculator.currentValue = 0) {
+    display.innerHTML = currentValue;
   } else {
-    value = value + e.target.innerHTML;
-    buttonPressed.value = value;
+    currentValue = (_readOnlyError("currentValue"), value + e.target.innerHTML);
+    display.innerHTML = value;
+  }
+}; // create operator function
+
+
+accessOperator = function accessOperator(e) {
+  var _calculator = calculator,
+      curentValue = _calculator.curentValue,
+      number1 = _calculator.number1,
+      operator = _calculator.operator;
+  var inputValue = parsefloat(curentValue);
+
+  if (number1 = (_readOnlyError("number1"), null)) {
+    calculator.number1 = inputValue;
   }
 
-  var buttonPressed = e.target.innerHTML;
-  numberResult.innerHTML = buttonPressed;
-  numberButtons.addEventListener('buttonEventListener');
-}; //clears ouput 
+  calculator.ifnumber2 = true;
+  calculator.operator = secondOperator;
+}; // calculate function
 
 
-clearButton.addEventListener('click', function () {
-  numberResult.innerHTML = 0;
-}); // operator interaction 
-// plus function 
+calculate = function calculate(e) {
+  if (operator === '+') {
+    return number1 + number2;
+  } else if (operator === '-') {
+    return number1 - number2;
+  } else if (operator === 'x') {
+    return number1 * number2;
+  } else if (operator === '÷') {
+    return number1 / number2;
+  }
 
-var sum = function sum() {};
+  return number2;
+};
 
-var multiply = function multiply() {};
-
-var minus = function minus() {};
-
-var divide = function divide() {};
-
-var findPercentage = function findPercentage() {};
+resetButton = function resetButton(e) {
+  calculator.currentValue = "0";
+  calculator.number1 = null;
+  calculator.ifnumber2 = false;
+  calculator.operator = null;
+};
