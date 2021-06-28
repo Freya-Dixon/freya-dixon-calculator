@@ -10,15 +10,35 @@ const calculatorObject = {
 };
 console.log(calculatorObject);
 
-const keys = document.querySelectorAll('.btn');
-console.log(keys);
+const button = document.querySelectorAll('.btn');
+console.log(button);
+
 const operatorKeys = document.querySelectorAll('.btn.operator');
 console.log(operatorKeys);
+
 const numberKeys = document.querySelectorAll('.btn.number')
 console.log(numberKeys);
+
 const functionKeys = document.querySelectorAll('.btn.function');
+
+const display = document.querySelector('#result');
+console.log(display);
+
+const clearButton = document.querySelector('.btn.function.clear');
+console.log(clearButton);
+
+const equalsButton = document.querySelector('.btn.operator.equals')
+console.log();
+
+const plusButton = document.querySelector('.btn.operator.plus')
+console.log();
+
+const divideButton = document.querySelector('.btn.operator.divide')
+console.log();
+
+const muliplyButton = document.querySelector('.btn.operator.multiply')
     
-keys.forEach((button) => {
+button.forEach((button) => {
     button.addEventListener('click', (e) => {
     updateInput(e);
     enterNumber(e);
@@ -31,8 +51,7 @@ keys.forEach((button) => {
 // update display to the user's input 
 
 updateInput = () => {
-const display = document.querySelector('#result');
-display.value = calculator.currentValue;
+display.value = calculatorObject.currentValue;
 }
 updateInput();
 
@@ -40,8 +59,8 @@ updateInput();
 // display buttons on input display when user hits key
 
 enterNumber = () => {
-    const currentValue = calculatorObject;
-    if (calculator.currentValue = 0) {
+    const currentValue = calculatorObject.currentValue;
+    if (calculatorObject.currentValue = 0) {
      display.innerHTML = currentValue;
     }
     else {
@@ -49,17 +68,21 @@ enterNumber = () => {
     display.innerHTML = value;
     }
 };
-
-// create operator function
+// enterDecimal = () => {
+//     if ()
+//     return
+//     else
+// }
+// // create operator function
 
 accessOperator = (e) => {
-    const {curentValue, number1, operator} = calculator;
+    const {curentValue, number1, operator} = calculatorObject;
     const inputValue = parsefloat(curentValue);
     if (number1 = null) {
-        calculator.number1 = inputValue;
+        calculatorObject.number1 = inputValue;
     }
-calculator.ifnumber2 = true;
-calculator.operator = secondOperator;
+calculatorObject.ifnumber2 = true;
+calculatorObject.operator = secondOperator;
 }
 // calculate function
 calculate = (e) => {
@@ -79,9 +102,24 @@ calculate = (e) => {
 }
 
 resetButton = (e) => {
-    calculator.currentValue = "0"
-    calculator.number1 = null;
-    calculator.ifnumber2 = false;
-    calculator.operator = null;
+    calculatorObject.currentValue = "0"
+    calculator0bject.number1 = null;
+    calculatorObject.ifnumber2 = false;
+    calculatorObject.operator = null;
 }
 
+
+
+// const buttonEventListener = (e) => {
+//     const buttonPressed = e.target.innerHTML;
+//     numberResult.innerHTML = buttonPressed;
+//     numberButtons.addEventListener('buttonEventListener');
+
+// }
+
+
+// // clears output 
+// const clearValue = (e) => {
+//     clearButton.innerHTML == 0
+//     clearButton.addEventListener('click', (e))
+// }
