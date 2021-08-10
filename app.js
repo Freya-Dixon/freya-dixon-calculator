@@ -2,19 +2,12 @@
 
 // calculator object, condenses important values into one object, curentValue will always be set to 0 by default, number 1 will be null. If number2 will be set to false, declared as boolean to adapt to multiple instances where user may or may not return value. The operator will also be set to null
 
-// const calculatorObject = {
-//     currentValue: 0,
-//     number1: null,
-//     ifnumber2: false,
-//     operator: null
-// };
-// console.log(calculatorObject);
 
 const buttons = document.querySelectorAll('.btn');
 console.log(buttons);
 
-const operatorKeys = document.querySelectorAll('.btn.operator');
-console.log(operatorKeys);
+const operator = document.querySelectorAll('.btn.operator');
+console.log(operator);
 
 const numberKeys = document.querySelectorAll('.btn.number')
 console.log(numberKeys);
@@ -34,12 +27,15 @@ console.log();
 const plusButton = document.querySelector('.btn.operator.plus')
 console.log();
 
+const minusButton = document.querySelector('.btn.operator.minus')
+console.log();
+
 const divideButton = document.querySelector('.btn.operator.divide')
 console.log();
 
 const muliplyButton = document.querySelector('.btn.operator.multiply')
 
-let Stringvalue = "";
+let stringValue = "";
 
 //loops through event listeners 
     
@@ -52,43 +48,75 @@ buttons.forEach((button) => {
 
 // update display to the user's input 
 updateInput = (e) => {
+    if (e.target.innerHTML == '=') {
+        console.log("Not adding ");
+    } else {
     display.value += (e.target.innerHTML);
     console.log(e.target.innerHTML);
+    }
 };
 
-
+// clear input
 clearButton.addEventListener('click',() => {
     display.value = "";
 });
 
-// const clearValue = (e) => {
-//  let clearcontents = display.value += (e.target.innerHTML);
-//  clearcontents = "";
-//  clearButton.addEventListener('click',(e))
-// }
-// clearValue();
-
+equalsButton.addEventListener('click', () => {
+    calculateSum();
+})
+//converting string into number 
 
 
 //exploring potential input scenarios
 
-// 1 - 
+calculateSum = () => {
+let tempOperator = "";
+console.log(display.value.split(""));
+display.value.split("").forEach(item => {
+    if (item == '+' || item == '-' || item == '×' || item == '/') {
+        console.log(item);
+        tempOperator = item;
+    }
+})
+const number1 = parseFloat(display.value.split(tempOperator)[0]);
+const number2 = parseFloat(display.value.split(tempOperator)[1]);
+console.log(display.value.split(tempOperator));
+        if (tempOperator === '+') {
+    display.value = number1 + number2;
+    return number1 + number2;
+        }
+        else if (tempOperator === '-') {
+        display.value = (number1 - number2);
+        return number1 - number2;
+    }
+    else if (tempOperator === '×') {
+        display.value = (number1 * number2);
+        return number1 * number2;
+    }
+    else if (tempOperator === '÷') {
+        display.value = (number1 / number2);
+        return number1 / number2;
+    }
+}  
+calculateSum();
 
-// calculate = (e) => {
-//     if (calculatorObject.operator === '+') {
-//     return number1 + number2;
-// }  
-//     else if (operator === '-') {
-//         return number1 - number2;
-//     }
-//     else if (operator === 'x') {
-//         return number1 * number2;
-//     }
-//     else if (operator === '÷') {
-//         return number1 / number2;
-//     }
-//     return number2;
-// }
+// now, a separate function needs to be made to allow for multiple integers to be added together 
+
+// then, a function that allows for minus numbers to be displayed on the page 
+
+// a function that allows a number with a decimal to be added 
+
+
+// a toggle function that bypasses the default function on the opeartor buttons so the buttons do not show on the page 
+
+
+// a function that allows for the user to find a percentage 
+
+// a toggle function on the plus/minus 
+
+//inner html set to zero
+
+// round decimal to nearest two digits
 
 // // };
 // // enterDecimal = () => {
@@ -99,13 +127,3 @@ clearButton.addEventListener('click',() => {
 // //     else
 // // }
 // // // create operator function
-
-// accessOperator = (e) => {
-//     const {curentValue, number1, operator} = calculatorObject;
-//     const inputValue = parsefloat(curentValue);
-//     if (number1 = null) {
-//         calculatorObject.number1 = inputValue;
-//     }
-// calculatorObject.ifnumber2 = true;
-// calculatorObject.operator = secondOperator;
-// }
