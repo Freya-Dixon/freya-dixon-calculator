@@ -73,7 +73,7 @@ calculateSum = () => {
 let tempOperator = "";
 console.log(display.value.split(""));
 display.value.split("").forEach(item => {
-    if (item == '+' || item == '-' || item == '×' || item == '/') {
+    if (item == '+' || item == '-' || item == '×' || item == '/' || item == '%') {
         console.log(item);
         tempOperator = item;
     }
@@ -95,6 +95,10 @@ console.log(display.value.split(tempOperator));
     }
     else if (tempOperator === '÷') {
         display.value = (number1 / number2);
+        return number1 / number2;
+    }
+    else if (tempOperator === '%') {
+        display.value = (number1 / number2 * 100);
         return number1 / number2;
     }
 }  

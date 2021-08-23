@@ -54,7 +54,7 @@ calculateSum = function calculateSum() {
   var tempOperator = "";
   console.log(display.value.split(""));
   display.value.split("").forEach(function (item) {
-    if (item == '+' || item == '-' || item == '×' || item == '/') {
+    if (item == '+' || item == '-' || item == '×' || item == '/' || item == '%') {
       console.log(item);
       tempOperator = item;
     }
@@ -74,6 +74,9 @@ calculateSum = function calculateSum() {
     return number1 * number2;
   } else if (tempOperator === '÷') {
     display.value = number1 / number2;
+    return number1 / number2;
+  } else if (tempOperator === '%') {
+    display.value = number1 / number2 * 100;
     return number1 / number2;
   }
 };
